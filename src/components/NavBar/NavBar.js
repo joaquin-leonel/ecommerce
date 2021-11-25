@@ -2,6 +2,7 @@ import react from "react";
 import './NavBar.css'
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
+import CardWidget from '../CardWidget/CartWidget';
 
 export default function NavBar() {
     return(
@@ -16,6 +17,7 @@ export default function NavBar() {
                   <li><Button variant="contained">Quienes somos </Button></li>
                   <li><Button variant="contained">Contacto </Button></li>
               </ul>
+              <CardWidget />
             </nav>
     </AppBar>
     )
