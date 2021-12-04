@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar.js'
 import Footer from './components/Footer/Footer.js'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.js'
-import Product from './components/Product/Product.js'
+import Item from './components/Item/Item.js'
 
 function App() {
   return (

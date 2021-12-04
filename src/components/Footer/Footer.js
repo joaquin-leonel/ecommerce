@@ -1,7 +1,7 @@
-import react from "react";
+
 import './Footer.css'
 import AppBar from '@mui/material/AppBar';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 
 export default function Footer() {
     return(

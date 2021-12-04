@@ -14,7 +14,7 @@ export default function NavBar() {
               <ul> 
                   <li><Button variant="contained">Inicio </Button></li>
                   <li><Button variant="contained">Productos </Button></li>
-                  <li><Button variant="contained">Quienes somos </Button></li>
+                  <li><Button variant="contained">Nosotros </Button></li>
                   <li><Button variant="contained">Contacto </Button></li>
               </ul>
               <CardWidget />
