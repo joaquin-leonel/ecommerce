@@ -5,23 +5,29 @@ import './Item.css'
 
 export default function Item({data}) {
 
-    const [itemCount,setItemCount]=useState(1);
+   
 
+    const [itemCount,setItemCount]=useState(0);
+
+ 
     const updateItem=() => {
-        if (itemCount < data.stock) {
+        
+        if ( data.stock>0) {
         setItemCount(itemCount +1)
+        data.stock--
         }
-
+        
     }
 
     const removeItem=() => {
-        if (itemCount >1) {
+        if (itemCount >0) {
             setItemCount(itemCount -1)
+            data.stock++
             }
     }
 
 
-   
+  
 
     return(
 
