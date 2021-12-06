@@ -3,6 +3,7 @@ import './ItemList.css'
 
 
 import Item from '../Item/Item';
+import ItemCount from '../ItemCount/ItemCount';
 import  Container  from "@mui/material/Container";
 import Grid from '@mui/material/Grid';
 import CircularProgress  from "@mui/material/CircularProgress";
@@ -105,6 +106,7 @@ const [products,setProducts]=useState([]);
                             {/* <p>{product.id}</p> */}
                             {/* <Product nombreProducto={product.name} img={product.img} stock={product.stock}/> */}
                             <Item data={product}/>
+                            <ItemCount data={product}/>
                         </Grid>
             
                         )
