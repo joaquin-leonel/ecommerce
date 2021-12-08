@@ -1,0 +1,51 @@
+.nameItemDetail{
+    color:black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.ItemDetailCard{
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+.ItemDetail{
+    display: flex;
+    justify-items:  center;
+    
+}
+
+.itemInfo{
+    padding:1rem;
+ border:1px solid rgba(0,0,0,.2)
+}
+
+.priceBox{
+    display: flex;
+    align-items: center;
+}
+.discountVal{
+    /* color:#1976d2; */
+    color:red;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-top: -1.8rem;
+}
+
+.priceVal{
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: -1rem;
+}
+
+.stockBox{
+    margin-top:-0.9rem;
+}
+
+.exPriceBox{
+    text-decoration: line-through;
+    margin-top: 1rem;
+}
