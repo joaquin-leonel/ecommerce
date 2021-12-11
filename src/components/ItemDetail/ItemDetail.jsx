@@ -8,7 +8,6 @@ export default function ItemDetail ({data}) {
         <div className="ItemDetailCard">
             <div className="ItemDetail">
                 <img src={`../../assets/${data.img}`} alt="imagen del producto" />
-            
                 <div className="itemInfo">
                     <h2 className="nameItemDetail"> {data.name} </h2>
                     <p className="exPriceBox">$ {(data.price*data.discount/100)+data.price}</p>

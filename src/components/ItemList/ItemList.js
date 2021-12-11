@@ -104,8 +104,7 @@ const [products,setProducts]=useState([]);
                         return( 
                             
                         <Grid item xs={3} key={product.id}>
-                            {/* <p>{product.id}</p> */}
-                            {/* <Product nombreProducto={product.name} img={product.img} stock={product.stock}/> */}
+                            
                             <Item data={product}/>
                             <ItemCount data={product}/>
                         </Grid>
