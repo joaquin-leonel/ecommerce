@@ -11,14 +11,15 @@ export default function Item({data}) {
 
 
         <div>
-            <Link to={`/products/${data.id}`} style={{ textDecoration:'none' }}>
+            <Link to={`/item/${data.id}`} style={{ textDecoration:'none' }}>
                 <h2>{data.name}</h2>
                 
                 <div className="itemImage">
                 <img src={`../../assets/${data.img}`} alt="imagen del producto" />
                 </div>
 
-            
+                <div>Stock disponible: {data.stock}</div>
+
                 <Button variant="contained" style={{
                         backgroundColor: "green",
                         color: "white",

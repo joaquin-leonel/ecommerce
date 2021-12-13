@@ -1,9 +1,7 @@
 import React, {useEffect,useState} from "react";
 import './ItemList.css'
-
-
 import Item from '../Item/Item';
-import ItemCount from '../ItemCount/ItemCount';
+
 import  Container  from "@mui/material/Container";
 import Grid from '@mui/material/Grid';
 import CircularProgress  from "@mui/material/CircularProgress";
@@ -106,7 +104,7 @@ const [products,setProducts]=useState([]);
                         <Grid item xs={3} key={product.id}>
                             
                             <Item data={product}/>
-                            <ItemCount data={product}/>
+                            
                         </Grid>
             
                         )

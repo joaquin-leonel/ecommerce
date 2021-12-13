@@ -26,6 +26,7 @@ export default function ItemDetailContainer () {
             price:12000,
             stock:6,
             img:'asrokA520MHVS.png',
+            discount:20,
             description:'placa base asrock a530 compatible con procesadores AMD',
         },
 
@@ -35,6 +36,7 @@ export default function ItemDetailContainer () {
             price:9000,
             stock:12,
             img:'discoRigidoSeagate.png',
+            discount:20,
             description:'Disco rigido marca Seagate de 1TB 7200RPM 64MB Cache',
         }
     

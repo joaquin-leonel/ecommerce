@@ -1,6 +1,8 @@
 import react from 'react'
 import './ItemDetail.css'
 import Button from '@mui/material/Button';
+import ItemCount from '../ItemCount/ItemCount';
+
 
 export default function ItemDetail ({data}) {
     
@@ -17,6 +19,7 @@ export default function ItemDetail ({data}) {
                         <p className="discountVal">20% OFF</p>
                     </div>
                     
+                    <ItemCount data={data}/>
                     <p className="stockBox"> {data.stock} unidades Disponibles</p>
 
                     <Button variant="contained" style={{
