@@ -1,0 +1,17 @@
+.CategoryTitle{
+    color:blue;
+    text-align: center;
+   
+}
+
+.categoryContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.CategoryItem{
+    padding: 2rem;
+    min-width: 0;
+}

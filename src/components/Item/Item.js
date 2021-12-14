@@ -14,9 +14,9 @@ export default function Item({data}) {
             <Link to={`/item/${data.id}`} style={{ textDecoration:'none' }}>
                 <h2>{data.name}</h2>
                 
-                <div className="itemImage">
-                <img src={`../../assets/${data.img}`} alt="imagen del producto" />
-                </div>
+                
+                <img  className="itemImage" src={`../../assets/${data.img}`} alt="imagen del producto" />
+                
 
                 <div>Stock disponible: {data.stock}</div>
 

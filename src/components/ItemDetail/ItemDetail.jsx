@@ -9,7 +9,7 @@ export default function ItemDetail ({data}) {
     return(
         <div className="ItemDetailCard">
             <div className="ItemDetail">
-                <img src={`../../assets/${data.img}`} alt="imagen del producto" />
+                <img  className="itemImage" src={`../../assets/${data.img}`} alt="imagen del producto" />
                 <div className="itemInfo">
                     <h2 className="nameItemDetail"> {data.name} </h2>
                     <p className="exPriceBox">$ {(data.price*data.discount/100)+data.price}</p>
@@ -20,8 +20,10 @@ export default function ItemDetail ({data}) {
                     </div>
                     
                     <ItemCount data={data}/>
-                    <p className="stockBox"> {data.stock} unidades Disponibles</p>
+                    <p className="stockBox"><strong>{data.stock} unidades Disponibles </strong></p>
 
+                    <p>Detalles de producto</p>
+                    <p className='descItem'>{data.description}</p>
                     <Button variant="contained" style={{
                         backgroundColor: "green",
                         color: "white",

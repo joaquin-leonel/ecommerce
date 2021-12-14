@@ -20,7 +20,7 @@ export default function NavBar() {
                     </li>
                   
                   <li>
-                  <Link to="/">
+                  <Link to="/category">
                           <Button variant="contained">Productos </Button>
                           </Link>  
                     </li>

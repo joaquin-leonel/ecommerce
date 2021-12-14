@@ -1,14 +1,21 @@
-import react, {useEffect,useState} from 'react'
-import ItemDetail from '../ItemDetail/ItemDetail'
-import { useParams } from 'react-router';
+import React, {useEffect,useState} from "react";
+
+import Item from '../Item/Item';
+
+import  Container  from "@mui/material/Container";
+import Grid from '@mui/material/Grid';
 import CircularProgress  from "@mui/material/CircularProgress";
+import { useParams } from "react-router-dom";
 
-export default function ItemDetailContainer () {
-    const [loader,setLoader]=useState(true);
-    const [product,setProduct]=useState([]);
 
-    console.log("useparams:", useParams())
-    const {id} =useParams()
+
+const CategoriesList =() => {
+
+const {category} = useParams();
+console.log("cat",{category})
+
+const [loader,setLoader]=useState(true);
+const [products,setProducts]=useState([]);
 
     const dataProducts = [
         {
@@ -17,8 +24,8 @@ export default function ItemDetailContainer () {
             price:10000,
             stock:'20',
             img:'kingstonRam8Gb.png',
-            discount:20,
             description:'Memoria ram Kingston alta velocidad de 8GB',
+            category:4,
         },
 
         {
@@ -27,8 +34,8 @@ export default function ItemDetailContainer () {
             price:12000,
             stock:6,
             img:'asrokA520MHVS.png',
-            discount:20,
             description:'placa base asrock a530 compatible con procesadores AMD',
+            category:3,
         },
 
         {
@@ -37,7 +44,6 @@ export default function ItemDetailContainer () {
             price:9000,
             stock:12,
             img:'discoRigidoSeagate.png',
-            discount:20,
             description:'Disco rigido marca Seagate de 1TB 7200RPM 64MB Cache',
             category:2,
         },
@@ -48,7 +54,6 @@ export default function ItemDetailContainer () {
             price:200000,
             stock:12,
             img:'gforceGtxSeries.png',
-            discount:20,
             description:'Placa de video Gforce gtx1050 con 768 nucleos',
             category:6,
         },
@@ -59,7 +64,6 @@ export default function ItemDetailContainer () {
             price:10000,
             stock:50,
             img:'SSDkingston.png',
-            discount:20,
             description:'Disco solido marca kingston de 250 GB de capacidad',
             category:5,
         },
@@ -70,15 +74,15 @@ export default function ItemDetailContainer () {
             price:1000,
             stock:300,
             img:'kingstonPendrive32gb.png',
-            discount:20,
             description:'Pendrive Kingston 32GB USB 3.0 alta velocidad',
             category:7,
         },
+
         {
             id:7,
             name:'Procesador intel I9 700K ',
             price:75000,
-            stock:10,
+            stock:20,
             img:'intelI9700K.png',
             discount:20,
             description:'Procesador Intel i9 ultima generacion',
@@ -95,10 +99,21 @@ export default function ItemDetailContainer () {
             description:'Case Thermaltake V200 (no Incluye fuente)',
             category:7,
         },
-     
     ]
 
+    const getProducts= new Promise((resolve,reject) =>{
+        setTimeout(() => {
+            resolve(dataProducts)
+        },2000)
+    })
 
+    // useEffect(()=>{
+    //     getProducts.then((data) =>{
+    //      console.log("respuesta",data)
+    //      setProducts(data)
+    //      setLoader(false)
+    //      })
+    // },[]
 
     const getProduct= new Promise((resolve,reject) =>{
         setTimeout(() => {
@@ -109,10 +124,10 @@ export default function ItemDetailContainer () {
     useEffect(()=>{
         getProduct.then((resultsProducts) =>{
              resultsProducts.filter(resultProduct => {
-                if(resultProduct.id === parseInt(id)){
-                    setProduct(resultProduct)
-                    setLoader(false)
-                    // console.log("el result product es ",resultProduct.price)
+                if(resultProduct.category === parseInt(category)){
+                    products.push(resultProduct);
+                   setLoader(false)
+                 
                 }
             
         })
@@ -122,11 +137,41 @@ export default function ItemDetailContainer () {
     },[])
 
 
-    
     return(
-        loader ? <CircularProgress /> :
-      <div>
-        <ItemDetail data={product}/>
-        </div>
+        <>
+        
+         <h2 className="tituloProductos">Productos</h2>
+         
+         {console.log ('productos: ', products)}
+
+        <Container className="itemCardContainer">
+
+            {
+                loader ? <CircularProgress /> :
+
+                <Grid container spacing={2}>
+                {
+                
+                    products.map((product) =>{
+                        return( 
+                            
+                        <Grid item xs={3} key={product.id}>
+                            
+                            <Item data={product}/>
+                            
+                        </Grid>
+            
+                        )
+                    })
+                }
+        </Grid> 
+            }
+   
+        </Container>
+
+    </>
+ 
     )
+
 }
+export default CategoriesList

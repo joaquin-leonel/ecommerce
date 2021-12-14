@@ -49,3 +49,18 @@
     text-decoration: line-through;
     margin-top: 1rem;
 }
+
+.stockProduct{
+    padding: -2rem;
+}
+
+.stock-Container{
+    margin-left: -20rem;
+
+}
+
+.itemImage{
+    width: 286px;
+    height: 286px;
+    padding-top: 1rem;
+}

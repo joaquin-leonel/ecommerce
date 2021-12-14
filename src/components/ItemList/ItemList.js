@@ -86,7 +86,7 @@ const [products,setProducts]=useState([]);
     return(
         <>
         
-         <h2 className="tituloProductos">Productos con descuento</h2>
+         <h2 className="tituloProductos">Productos</h2>
          
          {console.log ('productos: ', products)}
 

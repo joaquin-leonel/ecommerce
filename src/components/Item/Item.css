@@ -9,14 +9,17 @@
 .stock-container{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-left: -6rem;
+    /* justify-content: center;
+    margin-left: -20rem; */
 }
 
 .stockProduct{
-    padding-bottom: 15px;
-   
+    padding-top: .5rem;
+    padding-bottom: 2rem;
+    margin-left: -1rem;
 }
+
+
 
 h3{
     color:blue;
@@ -31,6 +34,7 @@ h2{
 
 .itemImage{
 margin-left: -3rem;
+width: 20%;
 }
 
 span{

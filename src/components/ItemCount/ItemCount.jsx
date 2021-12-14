@@ -43,7 +43,7 @@ console.log("la info",{data})
             <Button variant="contained" onClick={updateItem}> + </Button>
             </div>
             <div className="stockProduct">
-            <span>Stock:{data.stock}</span>
+            <span><strong>Stock:{data.stock}</strong> </span>
             </div>
             
             
