@@ -1,16 +1,16 @@
-import react, { useEffect,useState } from 'react'
+import  { useState } from 'react'
 import Button from '@mui/material/Button';
 
 
-export default function ItemCount({data}) {
+export default function ItemCount({data,onAdd}) {
 
    
-console.log("la info",{data})
+
     const [itemCount,setItemCount]=useState(0);
 
  
     const updateItem=() => {
-        
+        onAdd(itemCount +1)
         if ( data.stock>0) {
         setItemCount(itemCount +1)
         data.stock--
