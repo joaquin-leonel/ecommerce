@@ -1,17 +1,21 @@
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import './ItemDetail.css'
 import Button from '@mui/material/Button';
 import ItemCount from '../ItemCount/ItemCount';
 import {Link} from 'react-router-dom'
+import cartContext from '../../context/cartContext';
 
 export default function ItemDetail ({data}) {
     
     const [quantityItem,setQuantityItem] = useState(0)
+    const {addProducts, products} = useContext(cartContext)
     const [itemCart,setItemCart]= useState(
         {
             id:data.id,
             nombre:data.name,
-            quantity:0
+            quantity:0,
+            price:data.price,
+            image:data.img
         }
     )
 
@@ -20,8 +24,9 @@ export default function ItemDetail ({data}) {
         itemCart.quantity=value
     }
 
-const sendItem =() => {
-    console.log("itemcart: ",itemCart)
+const sendItem = () => {
+    addProducts(itemCart)
+    console.log("add products ",products)
 }
 
     return(
@@ -43,14 +48,14 @@ const sendItem =() => {
                     <p>Detalles de producto</p>
                     <p className='descItem'>{data.description}</p>
                    
-                    <Link to='/cart'  style={{textDecoration:'none' }}>
+                   
                     <Button onClick={sendItem}   variant="contained" style={{
                         backgroundColor: "green",
                         color: "white",
                         marginBottom: "2rem"
                         }}>  Agregar a Carrito
                     </Button>
-                    </Link>
+                   
                 </div>
                 
             </div>
