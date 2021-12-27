@@ -12,12 +12,19 @@ const CardWidget= () => {
 
     })
 
-    const{products}=useContext(cartContext)
+    const{products,clearCart,removeItem}=useContext(cartContext)
 
     const openCart = () => {
         
         setShowCart(!showCart)
     }
+
+
+
+const deleteProduct = () =>{
+    console.log("producto para borrar: ",products.name)
+    
+}
 
 console.log("prod agreg al carrit",products)
 
@@ -29,21 +36,25 @@ console.log("prod agreg al carrit",products)
            <div className={`box-cart ${showCart && 'active'}`}>
                {products.map((product) =>{
                    return(
-                    <div className='item-cart-list'>
+                         <div className='item-cart-list'>
                         <div>
                         <img className="cartImage" src={`../../assets/${product.image}`} alt="imagen del producto" />
                         </div>
                         <p className="infoCart">{product.nombre}</p>
                          <p className="infoCart"> Precio: ${product.price}</p>
                         
-                        <p className="infoCart"> Stock: {product.quantity}</p>
+                        <p className="infoCart"> cantidad: {product.quantity}</p>
+                        <button onClick={()=>{removeItem(product.id)}}> Eliminar producto</button>
                         </div> 
+                       
+                        
+
                    )
                })}
                         
-            
+                        <button onClick={()=>{clearCart()}}> Vaciar Carrito</button>
            </div> :null}
-       
+           
         </div>
     )
 }
