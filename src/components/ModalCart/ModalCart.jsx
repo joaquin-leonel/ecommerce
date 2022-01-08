@@ -4,9 +4,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import {Link} from 'react-router-dom' 
 
 
-export default function ModalCart({products,total}){
+export default function ModalCart({products}){
 
-    const{clearCart,removeItem}=useContext(cartContext)
+    const{clearCart,removeItem,totalFinal}=useContext(cartContext)
 
     return(
                
@@ -36,7 +36,7 @@ export default function ModalCart({products,total}){
                     
                      <div>
                          <p>Total</p>
-                         <span>$ {total}</span>
+                         <span>$ {totalFinal}</span>
                     </div>
 
                     <button onClick={()=>{clearCart()}}> Vaciar Carrito</button>

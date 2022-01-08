@@ -1,10 +1,12 @@
 
 import React, {useContext} from 'react'
 import cartContext from '../../context/cartContext'
+import './CartPage.css'
 
 export default function CartPage() {
-const {products, totalPrice} = useContext(cartContext)
+const {products, totalPrice,totalFinal} = useContext(cartContext)
 console.log("los productos desde cartpage: ", products)
+
 
     return(
       <>
@@ -12,15 +14,16 @@ console.log("los productos desde cartpage: ", products)
 
        {products.map((product) =>{
            return(
-               <div key={product.id}>
-                    <p>nombre:{product.nombre}</p>
-                    <p>precio:{product.price}</p>
-                    <p>cantidad:{product.quantity}</p>
-                    <img className="cartImage" src={`../assets/${product.image}`} alt="imagen del producto" />
+               <div className='cartContainer' key={product.id}>
+                   <img className="cartImage" src={`../assets/${product.image}`} alt="imagen del producto" />
+                    <p className='pCart'>{product.name}</p>
+                    <p className='pCart'>{product.quantity} Unidades</p>
+                    <p className='pCart'>precio: ${product.price}</p>
+                  
                </div>
              )
        })}
-       <h2>Subtotal: {totalPrice}</h2>
+       <h2>Subtotal: {totalFinal}</h2>
    </>
     )
 

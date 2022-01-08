@@ -2,6 +2,8 @@ import {useEffect,useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router';
 import CircularProgress  from "@mui/material/CircularProgress";
+import {doc, getDoc} from 'firebase/firestore'
+import db from '../../firebase'
 
 export default function ItemDetailContainer () {
     const [loader,setLoader]=useState(true);
@@ -98,28 +100,44 @@ export default function ItemDetailContainer () {
      
     ]
 
+async function getProduct(db){
+    const docRef = doc (db,"productos",id)
+    const docSnap =await getDoc(docRef);
 
+    if (docSnap.exists()) {
+       
+        console.log("doc data", docSnap.data())
+        let producto=docSnap.data()
+        producto.id=docSnap.id
+        setProduct(producto)
+        setLoader(false)
 
-    const getProduct= new Promise((resolve,reject) =>{
-        setTimeout(() => {
-            resolve(dataProducts)
-        },2000)
-    })
+    }else{
+        console.log("no hay nada")
+    }
+}
+
+    // const getProduct= new Promise((resolve,reject) =>{
+    //     setTimeout(() => {
+    //         resolve(dataProducts)
+    //     },2000)
+    // })
 
     useEffect(()=>{
-        getProduct.then((resultsProducts) =>{
-             resultsProducts.filter(resultProduct => {
-                if(resultProduct.id === parseInt(id)){
-                    setProduct(resultProduct)
-                    setLoader(false)
-                    // console.log("el result product es ",resultProduct.price)
-                }
+        // getProduct(db).then((resultsProducts) =>{
+        //      resultsProducts.filter(resultProduct => {
+        //         if(resultProduct.id === parseInt(id)){
+        //             setProduct(resultProduct)
+        //             setLoader(false)
+        //             // console.log("el result product es ",resultProduct.price)
+        //         }
             
-        })
-
-        
-        })
-    },[])
+        // })
+         //  })
+         
+      getProduct(db)
+     
+    },[id])
 
 
     

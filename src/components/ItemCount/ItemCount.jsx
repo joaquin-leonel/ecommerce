@@ -1,56 +1,49 @@
-import  { useState } from 'react'
+import React, { useState} from "react";
 import Button from '@mui/material/Button';
 
+export default function ItemCount({data, onAdd}) {
 
-export default function ItemCount({data,onAdd}) {
+    const [itemCount, setItemCout] = useState(1)
 
-   
 
-    const [itemCount,setItemCount]=useState(0);
+    const updateItem=() => {
+    if (itemCount===data.stock){
+        return;
+    }
+       setItemCout(itemCount+1)
+       
+   }
+
 
  
-    const updateItem=() => {
-        onAdd(itemCount +1)
-        if ( data.stock>0) {
-        setItemCount(itemCount +1)
-        data.stock--
-        }
-        
+   const removeItem=() => {
+    if (itemCount===1){
+        return;
     }
-
-    const removeItem=() => {
-        if (itemCount >0) {
-            setItemCount(itemCount -1)
-            data.stock++
-            }
-    }
+       setItemCout(itemCount-1)
+       
+   }
 
 
-  
+    return (
+        <div className="card-item-product">
 
-    return(
-
-
-        <>
-
-    
-
+                       
             <div className="stock-container">
-                
-            <Button variant="contained"  onClick={removeItem}> - </Button>
-            <h3>{itemCount}</h3>
-            
-            <Button variant="contained" onClick={updateItem}> + </Button>
-            </div>
-            <div className="stockProduct">
-            <span><strong>Stock:{data.stock}</strong> </span>
-            </div>
-            
-            
-
+                          
+                       <Button variant="contained"  onClick={removeItem}> - </Button>
+                           <h3>{itemCount}</h3>
+                           <Button variant="contained" onClick={updateItem}> + </Button>
+                       </div>
+                      
+                   
+                       <Button  onClick={()=>onAdd(itemCount)}  variant="contained" style={{
+                        backgroundColor: "green",
+                        color: "white",
+                        marginBottom: "2rem"
+                        }}>  Agregar a Carrito
+                    </Button>
            
-        </>
-        
+            </div>
     )
-
 }

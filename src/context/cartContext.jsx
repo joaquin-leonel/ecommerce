@@ -13,7 +13,7 @@ const [totalPrice, setTotalPrice] = useState(0);
        if (isInCart(product.id)){
            const newAddProducts = products.map(currentElement=>{
                if(currentElement.id === product.id){
-                   console.log("el current tiene",currentElement.quantity)
+                   
                    setTotalPrice(totalPrice+ product.price * product.quantity)
                    console.log("preciototal1 ",totalPrice+ product.price * product.quantity)
                 return{...currentElement, quantity: currentElement.quantity + 1}
@@ -22,21 +22,26 @@ const [totalPrice, setTotalPrice] = useState(0);
                })
            setProducts(newAddProducts)
            setTotalPrice(totalPrice+ product.price * product.quantity)
-           console.log("preciototal2 ",totalPrice+ product.price * product.quantity)
+           
        }else{
-        setProducts([...products,product])
+        setProducts(prev => [...prev, {...product, quantity}]);
         setTotalPrice(totalPrice+ product.price * product.quantity)
-        console.log("preciototal3 ",totalPrice+ product.price * product.quantity)
      
       }
     }
    
-const clearCart = () => setProducts([]) 
+    const clearCart = () => setProducts([]) 
+    
     const removeItem = (id) => setProducts(products.filter(product=>product.id !==id)); 
   
+    const totalFinal =products.reduce(function (acc,curr) {
+       
+        return acc+curr.quantity* curr.price
+        
+    },0)
 
     const data= {
-        products,addProducts,totalPrice,clearCart,removeItem,isInCart
+        products,addProducts,totalPrice,clearCart,removeItem,isInCart,totalFinal
     }
 
     return (

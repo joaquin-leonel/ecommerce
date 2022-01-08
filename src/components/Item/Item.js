@@ -1,7 +1,8 @@
-// import react, { useEffect,useState } from 'react'
+import react, {useState } from 'react'
+import ItemCount from '../ItemCount/ItemCount'
 import Button from '@mui/material/Button';
 import './Item.css'
-// import ItemCount from '../ItemCount/ItemCount.jsx';
+
 import { Link } from 'react-router-dom'
 
 export default function Item({data}) {
