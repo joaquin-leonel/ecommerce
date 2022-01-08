@@ -1,4 +1,4 @@
-import React, {useEffect,useState, useContext} from 'react'
+import React, {useState, useContext} from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './CartWidget.css'
 import cartContext from '../../context/cartContext';
@@ -14,9 +14,6 @@ const CartWidget= () => {
     const{products,totalPrice,clearCart,removeItem,totalFinal}=useContext(cartContext)
     const openCart =()=>{
         setShowCart (!showCart)
-
-        console.log('product object',products)
-        console.log ('total price', totalPrice)
     }
 
     return (

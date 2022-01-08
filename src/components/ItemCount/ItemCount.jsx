@@ -3,14 +3,14 @@ import Button from '@mui/material/Button';
 
 export default function ItemCount({data, onAdd}) {
 
-    const [itemCount, setItemCout] = useState(1)
+    const [itemCount, setItemCount] = useState(1)
 
 
     const updateItem=() => {
     if (itemCount===data.stock){
         return;
     }
-       setItemCout(itemCount+1)
+       setItemCount(itemCount+1)
        
    }
 
@@ -20,7 +20,7 @@ export default function ItemCount({data, onAdd}) {
     if (itemCount===1){
         return;
     }
-       setItemCout(itemCount-1)
+       setItemCount(itemCount-1)
        
    }
 

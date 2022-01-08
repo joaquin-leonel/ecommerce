@@ -15,17 +15,8 @@ export default function Item({data}) {
             <Link to={`/item/${data.id}`} style={{ textDecoration:'none' }}>
                 <h2>{data.name}</h2>
                 
+                 <img  className="itemImage" src={`../../assets/${data.img}`} alt="imagen del producto" />
                 
-                <img  className="itemImage" src={`../../assets/${data.img}`} alt="imagen del producto" />
-                
-
-                <div>Stock disponible: {data.stock}</div>
-
-                <Button variant="contained" style={{
-                        backgroundColor: "green",
-                        color: "white",
-                        marginBottom: "2rem"
-                }}>Agregar a Carrito</Button>
             </Link>
         </div>
         

@@ -16,7 +16,7 @@ const [totalPrice, setTotalPrice] = useState(0);
                    
                    setTotalPrice(totalPrice+ product.price * product.quantity)
                    console.log("preciototal1 ",totalPrice+ product.price * product.quantity)
-                return{...currentElement, quantity: currentElement.quantity + 1}
+                return{...currentElement, quantity: currentElement.quantity + quantity}
               
                 }else return currentElement
                })
@@ -25,7 +25,7 @@ const [totalPrice, setTotalPrice] = useState(0);
            
        }else{
         setProducts(prev => [...prev, {...product, quantity}]);
-        setTotalPrice(totalPrice+ product.price * product.quantity)
+        setTotalPrice(totalPrice + product.price * product.quantity)
      
       }
     }

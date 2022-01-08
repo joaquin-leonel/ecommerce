@@ -1,34 +1,13 @@
 import {useState, useContext} from 'react'
 import './ItemDetail.css'
-import Button from '@mui/material/Button';
 import ItemCount from '../ItemCount/ItemCount';
-import {Link} from 'react-router-dom'
 import cartContext from '../../context/cartContext';
 
 export default function ItemDetail ({data}) {
     
-    const [quantityItem,setQuantityItem] = useState(0)
+    // const [quantityItem,setQuantityItem] = useState(0)
     const {addProducts, products} = useContext(cartContext)
   
-    // const [itemCart,setItemCart]= useState(
-    //     {
-    //         id:data.id,
-    //         nombre:data.name,
-    //         quantity:0,
-    //         price:data.price,
-    //         image:data.img
-    //     }
-    // )
-
-//     const onAdd =(value) =>{
-//         console.log("items add ",value)
-//         itemCart.quantity=value
-//     }
-
-// const sendItem = () => {
-//     addProducts(itemCart)
-//     console.log("add products ",products)
-// }
 
 const  itemCart={
     id:data.id,
