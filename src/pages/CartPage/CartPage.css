@@ -1,8 +1,41 @@
+.TitleFinCompra{
+    color: rgb(61, 61, 61);
+    text-align: start;
+    padding-left: 2rem;
+}
+
+.pInfoCompraTitle{
+    text-align: start;
+    font-weight: bold;
+    font-size: 1rem;
+    padding:-3rem;
+
+}
+.pInfoCompra{
+    padding-top: -3rem ;
+}
+
 .cartContainer{
-    display: flex;
+   
+    width:510px;
+    height: 405px;
+    margin-top: -3.5rem;
+    margin-right: 1rem;
+    overflow: auto;
+    padding-left: 30px;
     justify-content: center;
+    
+}
+
+.cartItems{
+    display: flex;
+    width: 100%;
     align-items: center;
-    background: #2979ff;
+
+    color:white;
+   
+    text-align: center;
+    background: #2979ff; 
     border-bottom: 1px solid #0c0c0caf;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
@@ -10,12 +43,61 @@
 
 .pCart{
     font-weight:bold;
-    font-size: 1rem;
-    padding-left: 2rem;
+    font-size: .8rem;
+    padding-left: 1rem;
+    margin-left: -.5rem;
+    padding-right: .2rem;
     
 }
 
 .cartImage{
 width: 100px;
 height: auto;
+}
+
+.finCompraForm{
+    display: flex;
+}
+
+
+.form-container > div {
+    margin-bottom: 15px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+}
+
+.form-container button {
+    background: #2979ff; 
+    /* border: 1px solid black !important; */
+    
+    color: white;
+}
+
+.form-container button:hover {
+    color: black !important;
+}
+
+.TotalValueBox{
+  
+   margin-top: 1rem;
+    padding-right: 8.8rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.subtotalNumber{
+
+    font-size: 1rem;
+    color: rgb(61, 61, 61);
+}
+
+.totalNumber{
+ 
+    font-size: 2rem;
+    font-weight: bold;
 }
