@@ -3,15 +3,19 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './CartWidget.css'
 import cartContext from '../../context/cartContext';
 import DeleteIcon from '@mui/icons-material/Delete';
-
-
 import {Link} from 'react-router-dom' 
+
+
+
 
 
 const CartWidget= () => {
 
     const [showCart, setShowCart]=useState (false)
     const{products,totalPrice,clearCart,removeItem,totalFinal}=useContext(cartContext)
+
+    const totalProducts=products.map(productCart=>productCart.quantity).reduce((prev,curr) => prev+curr,0)
+
     const openCart =()=>{
         setShowCart (!showCart)
     }
@@ -19,9 +23,9 @@ const CartWidget= () => {
     return (
 
         <div className="cart-container">
-            
+             <span className='cartValue'>{totalProducts} </span>
             <ShoppingCartIcon onClick={openCart}/>
-
+       
 
             {showCart ?
             <div className={`box-cart active'}`}>

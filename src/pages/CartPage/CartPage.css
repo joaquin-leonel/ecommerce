@@ -4,6 +4,16 @@
     padding-left: 2rem;
 }
 
+.msgFinCompra{
+    color: rgb(61, 61, 61);
+    text-align: center;
+    padding-left: 2rem;
+}
+
+.orderNumber{
+    color:RED;
+}
+
 .pInfoCompraTitle{
     text-align: start;
     font-weight: bold;
@@ -17,7 +27,7 @@
 
 .cartContainer{
    
-    width:510px;
+    width:500px;
     height: 405px;
     margin-top: -3.5rem;
     margin-right: 1rem;

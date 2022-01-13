@@ -49,6 +49,23 @@
 }
 
 
+.cartValue{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  margin-left: 1REM;
+    color:white;
+    background: red;
+    
+   
+    text-align: center;
+
+   
+}
+
 .total-box{
   
 display: flex;
