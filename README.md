@@ -1,4 +1,4 @@
-# Proyecto final CoderHouse - E-commmerce ficticio PC Market - 
+# Proyecto final CoderHouse - E-commerce ficticio PC Market - 
 
 ![image](https://github.com/joaquin-leonel/ecommerce/blob/master/public/media/coderLogo.png)
 

@@ -10,6 +10,13 @@
     padding-left: 2rem;
 }
 
+
+.imgContainer{
+    display: flex;
+    justify-content: center;
+}
+
+
 .orderNumber{
     color:RED;
 }

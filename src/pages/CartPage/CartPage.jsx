@@ -44,9 +44,18 @@ export default function CartPage({}) {
 
   return (
     <div>
-     {orderId !=null ? <h1 className="msgFinCompra"> 
-     El código de orden de su compra es el <strong className='orderNumber'>{orderId}</strong> se le solicitará para retirar su pedido.
-      </h1>:
+     {orderId !=null ?
+     <>
+     <h1 className="msgFinCompra"> 
+     Su compra fue procesada con exito!
+      </h1>
+      <p className="msgFinCompra">El código de orden de su compra es el <strong className='orderNumber'>{orderId}</strong> se le solicitará para retirar su pedido.
+     </p>
+     <div className='imgContainer'>
+     <img className="imgCompraExito" src="assets/buyOk.png" alt="Compra exitosa" />
+     </div>
+      </>
+      :
     
     <>
       <h1 className="TitleFinCompra"> 

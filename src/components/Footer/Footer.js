@@ -7,7 +7,8 @@ export default function Footer() {
     return(
      <AppBar position="static"> 
       <footer>
-      <p>PC Market - Dirección: Av Rivadavia 323433 Caballito Capital Federal. E-mail: info@pcmarket.com.ar </p>
+     
+      <p>  <strong>PC Market </strong> - Dirección: Av Rivadavia 323433 Caballito Capital Federal. </p>
 </footer>
 
     </AppBar>
