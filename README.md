@@ -1,9 +1,8 @@
 # Proyecto final CoderHouse - E-commmerce ficticio PC Market - 
 
+![image](https://github.com/joaquin-leonel/ecommerce/blob/master/public/media/coderLogo.png)
 
 # React JS - Comisión 25380 
-
-![image](https://github.com/joaquin-leonel/ecommerce/blob/master/public/media/coderLogo.png)
 
 ### Realizado en:
 
