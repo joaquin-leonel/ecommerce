@@ -3,7 +3,7 @@
 
 # React JS - Comisión 25380 
 
-![image](https://github.com/joaquin-leonel/ecommerce/tree/master/public/media/coderLogo.png)
+![image](https://github.com/joaquin-leonel/ecommerce/blob/master/public/media/coderLogo.png)
 
 ### Realizado en:
 
@@ -44,7 +44,7 @@ Descargar/clonar este repositorio, luego se debe instalar la aplicacion haciendo
 
 # Demostracion del funcionamiento :coffee:
 
-![image](https://github.com/joaquin-leonel/ecommerce/tree/master/public/media/Demo.gif)
+![image](https://github.com/joaquin-leonel/ecommerce/blob/master/public/media/Demo.gif)
 
 
 
