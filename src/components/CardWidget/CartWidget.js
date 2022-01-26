@@ -12,7 +12,7 @@ import {Link} from 'react-router-dom'
 const CartWidget= () => {
 
     const [showCart, setShowCart]=useState (false)
-    const{products,totalPrice,clearCart,removeItem,totalFinal}=useContext(cartContext)
+    const{products,clearCart,removeItem,totalFinal}=useContext(cartContext)
 
     const totalProducts=products.map(productCart=>productCart.quantity).reduce((prev,curr) => prev+curr,0)
 

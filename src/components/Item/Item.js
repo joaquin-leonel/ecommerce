@@ -1,6 +1,4 @@
-import react, {useState } from 'react'
-import ItemCount from '../ItemCount/ItemCount'
-import Button from '@mui/material/Button';
+
 import './Item.css'
 
 import { Link } from 'react-router-dom'

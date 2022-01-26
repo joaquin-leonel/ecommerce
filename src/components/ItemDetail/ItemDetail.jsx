@@ -1,4 +1,4 @@
-import {useState, useContext} from 'react'
+import {useContext} from 'react'
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
 import cartContext from '../../context/cartContext';
@@ -6,7 +6,7 @@ import cartContext from '../../context/cartContext';
 export default function ItemDetail ({data}) {
     
     // const [quantityItem,setQuantityItem] = useState(0)
-    const {addProducts, products} = useContext(cartContext)
+    const {addProducts} = useContext(cartContext)
   
 
 const  itemCart={

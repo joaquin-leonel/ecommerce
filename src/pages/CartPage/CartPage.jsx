@@ -9,7 +9,7 @@ import db from '../../firebase'
 import { collection, addDoc } from 'firebase/firestore'
 
 export default function CartPage({}) {
-  const { products, totalPrice, totalFinal } = useContext(cartContext)
+  const {products, totalFinal } = useContext(cartContext)
   console.log('los productos desde cartpage: ', products)
 
   const [formData, setFormData] = useState({

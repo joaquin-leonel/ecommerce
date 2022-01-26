@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Proyecto final CoderHouse - E-commmerce ficticio PC Market - 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# React JS - Comisión 25380 
 
-In the project directory, you can run:
+![image](https://github.com/joaquin-leonel/ecommerce/blob/main/public/media/coderLogo.png)
 
-### `npm start`
+### Realizado en:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="HTML Logo" width="50" height="50"/> <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" alt="CSS Logo" width="50" height="50"/> <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="JavaScript Logo" width="40" height="40"/> <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" alt="React Logo" width="50" height="50"/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+E-commerce relacionado a la venta de Hardware y perisfericos, donde puede seleccionarse y agregarse diversos productos a un carro de compras para su posterior generacion de pedido y luego compra simulada(no se finaliza con metodo de pago).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# :blue_book: Instalación :blue_book:
 
-### `npm run build`
+Descargar/clonar este repositorio, luego se debe instalar la aplicacion haciendo uso del comando "npm install react-app", para luego posteriormente iniciarla con el comando "npm start". Finalizada la ejecucion de ambos comandos Se abrira el navegador que se tenga por defecto en la PC con la siguiente URL:  http://localhost:3000 para su visualizacion.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# :notebook: Dependencias :notebook:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- React-Router-DOM 
+- MUI - Material UI 
+- react-elastic-carousel
+- Firebase
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# :blue_book: Descripción del proyecto :blue_book:
 
-### `npm run eject`
+- El archivo App contiene un componente llamado AppRouter donde deriva a todas las secciones del e-commerce.
+- La carpeta components contiene los componentes utilizados dentro de la app. 
+- la carpeta pages contiene todos los componentes que son las diferentes webs del proyecto.
+- La carpeta Context, poosee el archivo de contexto utilizado en el proyecto.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# :arrow_forward: Uso de la aplicación :arrow_forward:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Ingresando al sitio web, el usuario ingresa al index de la web donde puede observarse un banner y acceso a diferentes productos, puede acceder a ellos tanto en el index como en la sección productos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Sección productos: accedemos a las diferentes categorías de productos que tenemos en el sitio: procesadores, discos rígidos, placas base, y demás categorías disponibles.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Clickeando sobre cualquier producto de cualquier categoría, accedemos al detalle de producto, en esta sección podremos seleccionar la cantidad del producto que deseamos sumar al carrito y sumarla con el botón "agregar a carrito".
+- A medida que se agregan los productos, estos pueden ir observándose en el carrito de compras, situado en el margen superior derecho de la barra de navegación al que se accede haciendo click en el icono del mismo. Dentro de las opciones del Widget del carrito tenemos la opción de eliminar por producto en caso de arrepentirnos del producto seleccionado, vaciar por completo todo el carrito, o finalizar la compra.
 
-## Learn More
+- Al presionar finalizar compra iremos a la sección la cual nos pedirá nombre teléfono e E-mail para confirmar compra, por parte del backend se generara la orden y se sumara a la base en firebase. Finalmente del lado del front nos mostrara que la compra fue completada exitosamente.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Demostracion del funcionamiento :coffee:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://github.com/joaquin-leonel/ecommerce/blob/main/public/media/Demo.gif)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
