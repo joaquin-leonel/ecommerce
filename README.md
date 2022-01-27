@@ -1,4 +1,4 @@
-# Proyecto final CoderHouse - E-commerce ficticio PC Market - 
+# Proyecto final CoderHouse - E-commerce PC Market - 
 
 ![image](https://github.com/joaquin-leonel/ecommerce/blob/master/public/media/coderLogo.png)
 
@@ -43,7 +43,7 @@ Descargar/clonar este repositorio, luego se debe instalar la aplicacion haciendo
 
 # Demostracion del funcionamiento :coffee:
 
-![image](https://github.com/joaquin-leonel/ecommerce/blob/master/public/media/Demo.gif)
+![image](https://github.com/joaquin-leonel/ecommerce/blob/master/public/media/ejemplo.gif)
 
 
 
